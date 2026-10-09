@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
 <title>Abrham Getaneh</title>
 <meta name="description" content="Abrham Getaneh, social media manager. 40M+ views and 1M+ followers grown for brands in Ethiopia, Canada, South Sudan and the US.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,10 +26,8 @@
   --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
 }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){--bg:#070f22;--surface:#0e1a35;--line:#1f2d4f;--ink:#eef2fb;--muted:#9aa8c7;--blue:#5b8cff;--blue-deep:#2f5ee8;--blue-soft:#142650;color-scheme:dark}
-}
-:root[data-theme="dark"]{--bg:#070f22;--surface:#0e1a35;--line:#1f2d4f;--ink:#eef2fb;--muted:#9aa8c7;--blue:#5b8cff;--blue-deep:#2f5ee8;--blue-soft:#142650;color-scheme:dark}
+/* Single light theme by choice: always white and blue, even when the visitor's device is in dark mode. */
+:root,:root[data-theme="dark"]{color-scheme:light}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit}
@@ -84,11 +83,11 @@ section.block{padding-block:clamp(56px,8vw,104px)}
 .row-btns{display:flex;flex-wrap:wrap;gap:12px}
 
 /* hero insight card (Popular Electronics branding) */
-.insight{min-width:0;background:linear-gradient(160deg,#ef4b3f, var(--popular) 45%, #8d1016);color:#fff;border-radius:28px;padding:28px;display:flex;flex-direction:column;gap:16px;box-shadow:0 30px 60px -30px rgba(160,20,25,.6);text-decoration:none;transition:transform .3s}
+.insight{min-width:0;background:linear-gradient(160deg,#3b6ef5, var(--blue) 45%, var(--blue-deep));color:#fff;border-radius:28px;padding:28px;display:flex;flex-direction:column;gap:16px;box-shadow:0 30px 60px -30px rgba(29,78,216,.6);text-decoration:none;transition:transform .3s}
 .insight:hover{transform:translateY(-4px) rotate(-.4deg)}
 .insight-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
 .acct{display:flex;align-items:center;gap:12px}
-.acct-mark{width:42px;height:42px;border-radius:12px;background:#fff;color:var(--popular);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:22px;flex:none}
+.acct-mark{width:42px;height:42px;border-radius:12px;background:#fff;color:var(--blue);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:22px;flex:none}
 .acct strong{display:block;font-size:15px}
 .acct small{opacity:.8;font-size:13px}
 .pill{font-family:var(--mono);font-size:11px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.18);white-space:nowrap}
